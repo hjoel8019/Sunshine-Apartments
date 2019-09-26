@@ -58,6 +58,7 @@ public class FlatFileReader {
 					email.add(data[3]);
 					Address addressObject = new Address(city, street, state, zip, country);
 					p = new Person(personCode,firstName, lastName, addressObject,email);
+					resultp.add(p);
 					continue;
 				}
 				
@@ -140,7 +141,7 @@ public class FlatFileReader {
 				String parkingFee;
 				String name;
 				
-				if(data[1].charAt(1) == 'L') {
+				if(data[1].contentEquals( "L")) {
 				
 					startDate = data[2];
 					endDate = data[3];
@@ -149,20 +150,20 @@ public class FlatFileReader {
 					pricePerAppartment = data[6];
 					pr = new LeaseAgreements(startDate, endDate, address, customerName, pricePerAppartment);
 				}
-				else if(data[1].charAt(1) == 'S') {
+				else if(data[1].contentEquals("S") ) {
 					dateTime = data[2];
 					address = data[3];
 					cost = data[4];
 					pr = new SaleAgreements(dateTime, address, cost);
 					
 				}
-				else if(data[1].charAt(1) == 'P') {
+				else if(data[1].contentEquals("P")) {
 					parkingFee = data[2];
 					
 					pr = new ParkingPass(parkingFee);
 				
 				}
-				else if(data[1].charAt(1) == 'A') {
+				else if(data[1].contentEquals("A")) {
 					name = data[2];
 					cost = data[3];
 					
