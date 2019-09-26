@@ -8,6 +8,7 @@ public class Person {
 	private String firstName;
 	private String lastName;
 	private Address address;
+	
 	private ArrayList<String> email;
 	
 	public Person(String personCode, String firstName, String lastName, Address address, ArrayList<String> email) {
@@ -48,6 +49,7 @@ public class Person {
 	public void setEmail(ArrayList<String> email) {
 		this.email = email;
 	}
+	
 	
 	
 

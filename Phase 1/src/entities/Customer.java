@@ -4,10 +4,12 @@ public class Customer {
 	private String customerCode;
 	private Person contact;
 	private String name;
-	private AddressCustomer address;
-	public Customer(String customerCode, Person contact, String name, AddressCustomer address) {
+	private Address address;
+	private String customerType;
+	public Customer(String customerCode,String customerType, Person contact, String name, Address address) {
 		super();
 		this.customerCode = customerCode;
+		this.customerType = customerType;
 		this.contact = contact;
 		this.name = name;
 		this.address = address;
@@ -30,11 +32,17 @@ public class Customer {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public AddressCustomer getAddress() {
+	public Address getAddress() {
 		return address;
 	}
-	public void setAddress(AddressCustomer address) {
+	public void setAddress(Address address) {
 		this.address = address;
+	}
+	public String getCustomerType() {
+		return customerType;
+	}
+	public void setCustomerType(String customerType) {
+		this.customerType = customerType;
 	}
 	
 	
