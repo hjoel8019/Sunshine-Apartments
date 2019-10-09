@@ -14,6 +14,9 @@ public class JsonWriter {
 		Gson gson = new GsonBuilder().setPrettyPrinting().create();
 		String jsonString = gson.toJson(person);
 		System.out.println(jsonString);
+		
+		
 	}
+	
 
 }

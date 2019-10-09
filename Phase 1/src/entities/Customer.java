@@ -1,6 +1,6 @@
 package entities;
 
-public class Customer {
+public abstract class Customer {
 	private String customerCode;
 	private Person contact;
 	private String name;
@@ -44,6 +44,9 @@ public class Customer {
 	public void setCustomerType(String customerType) {
 		this.customerType = customerType;
 	}
+	public abstract double getTax();
+	public abstract double getDiscount();
+	public abstract double additionalFee();
 	
 	
 

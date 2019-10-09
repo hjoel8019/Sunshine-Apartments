@@ -1,8 +1,9 @@
 package entities;
 
-public class Product {
+public abstract class Product {
 	private String productCode;
 	private String productType;
+
 	public String getProductCode() {
 		return productCode;
 	}
@@ -15,6 +16,16 @@ public class Product {
 	public void setProductType(String productType) {
 		this.productType = productType;
 	}
+	public Product(String productCode, String productType) {
+		super();
+		this.productCode = productCode;
+		this.productType = productType;
+	}
+	
+	public abstract double getCost();
+	public abstract double getTax();
+	public abstract double grandTotal();
+	
 	
 	
 

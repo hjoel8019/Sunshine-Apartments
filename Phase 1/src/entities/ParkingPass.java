@@ -6,7 +6,7 @@ public class ParkingPass extends Product {
 	
 
 	public ParkingPass(String parkingFee) {
-		super();
+		super(parkingFee, parkingFee);
 		this.parkingFee = parkingFee;
 	}
 
@@ -17,7 +17,25 @@ public class ParkingPass extends Product {
 	public void setParkingFee(String parkingFee) {
 		this.parkingFee = parkingFee;
 	}
-	
+
+	@Override
+	public double getTax() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public double grandTotal() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public double getCost() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+	 
 	
 	
 }

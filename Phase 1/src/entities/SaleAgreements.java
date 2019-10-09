@@ -3,12 +3,11 @@ package entities;
 public class SaleAgreements extends Product {
 	private String dateTime;
 	private String address;
-	private String cost;
-	public SaleAgreements(String dateTime, String address, String cost) {
-		super();
+	public SaleAgreements(String dateTime, String address) {
+		super(address, address);
 		this.dateTime = dateTime;
 		this.address = address;
-		this.cost = cost;
+		
 	}
 	public String getDateTime() {
 		return dateTime;
@@ -22,11 +21,21 @@ public class SaleAgreements extends Product {
 	public void setAddress(String address) {
 		this.address = address;
 	}
-	public String getCost() {
-		return cost;
+	
+	@Override
+	public double getTax() {
+		// TODO Auto-generated method stub
+		return 0;
 	}
-	public void setCost(String cost) {
-		this.cost = cost;
+	@Override
+	public double grandTotal() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+	@Override
+	public double getCost() {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 	
 

@@ -8,7 +8,7 @@ public class LeaseAgreements extends Product {
 	private String pricePerAppartment;
 	public LeaseAgreements(String startDate, String endDate, String address, String customerName,
 			String pricePerAppartment) {
-		super();
+		super(pricePerAppartment, pricePerAppartment);
 		this.startDate = startDate;
 		this.endDate = endDate;
 		this.address = address;
@@ -44,6 +44,21 @@ public class LeaseAgreements extends Product {
 	}
 	public void setPricePerAppartment(String pricePerAppartment) {
 		this.pricePerAppartment = pricePerAppartment;
+	}
+	@Override
+	public double getCost() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+	@Override
+	public double getTax() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+	@Override
+	public double grandTotal() {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 	
 	

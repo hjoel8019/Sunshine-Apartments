@@ -4,7 +4,7 @@ public class Amenity extends Product {
 	String name;
 	String cost;
 	public Amenity(String name, String cost) {
-		super();
+		super(cost, cost);
 		this.name = name;
 		this.cost = cost;
 	}
@@ -14,11 +14,23 @@ public class Amenity extends Product {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public String getCost() {
-		return cost;
-	}
 	public void setCost(String cost) {
 		this.cost = cost;
+	}
+	@Override
+	public double getTax() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+	@Override
+	public double grandTotal() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+	@Override
+	public double getCost() {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 	
 
